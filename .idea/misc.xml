@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/bg_ffffff_16dp.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable-v24/home_bg.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/bg_7f85f9_8dp.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/bg_feb63f_24dp.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/bg_ffffff_13dp.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/bg_ffffff_24dp.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/bg_ffffff_8dp.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/home_bg.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/main_progress.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/pwd_title_color_selector.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/drawable/tab_text_color_selector.xml" value="0.29384615384615387" />
+        <entry key="app/src/main/res/layout/activity_app.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/activity_home_content.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_set_pwd.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/activity_url.xml" value="0.21331521739130435" />
+        <entry key="app/src/main/res/layout/dialog_notice.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/dialog_set_pwd_success.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/fragment_locked.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/fragment_unlock.xml" value="0.20697463768115942" />
+        <entry key="app/src/main/res/layout/item_app.xml" value="0.20697463768115942" />
+        <entry key="app/src/main/res/layout/item_keyboard.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/item_pwd.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/layout_drawer.xml" value="0.21331521739130435" />
+        <entry key="app/src/main/res/layout/layout_home_content.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/view_check_pwd.xml" value="0.21331521739130435" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
