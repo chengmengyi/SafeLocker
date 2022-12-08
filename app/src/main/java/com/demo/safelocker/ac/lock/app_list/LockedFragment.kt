@@ -14,14 +14,19 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.safelocker.R
 import com.demo.safelocker.adapter.AppAdapter
+import com.demo.safelocker.admob.AdType
+import com.demo.safelocker.admob.ShowLockAdmob
 import com.demo.safelocker.app.show
 import com.demo.safelocker.entity.AppInfoEntity
 import com.demo.safelocker.interfaces.IUpdateAppListCallback
 import com.demo.safelocker.lock.AppListManager
+import com.demo.safelocker.lock.LockPwdManager
 import kotlinx.android.synthetic.main.fragment_locked.*
 
-class LockedFragment:Fragment() {
+class
+LockedFragment:Fragment() {
     private var iUpdateAppListCallback:IUpdateAppListCallback?=null
+    private val showFullAdmob by lazy { ShowLockAdmob(requireActivity(), AdType.LOCK) }
     private val appAdapter by lazy { AppAdapter(requireContext(),AppListManager.lockedList){ click(it) } }
 
     override fun onAttach(context: Context) {
@@ -55,6 +60,10 @@ class LockedFragment:Fragment() {
         appAdapter.notifyDataSetChanged()
         iUpdateAppListCallback?.updateAppList(false)
         setTips()
+        LockPwdManager.lockUnlockNum++
+        if(LockPwdManager.showFullAd()){
+            showFullAdmob.showFullAd()
+        }
     }
 
     private fun setTips(){

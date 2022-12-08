@@ -13,6 +13,9 @@ import android.view.View
 import android.widget.Toast
 import com.demo.safelocker.config.SafeLocalConfig
 
+fun safeLog(string: String){
+    Log.e("qwer",string)
+}
 
 fun View.show(boolean: Boolean){
     visibility=if (boolean) View.VISIBLE else View.GONE

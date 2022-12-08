@@ -46,4 +46,10 @@
         app:layout_constraintTop_toTopOf="@id/view_lock"
         app:layout_constraintLeft_toLeftOf="@id/view_lock"
         app:layout_constraintBottom_toBottomOf="@id/view_lock"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_margin="20dp"
+        layout="@layout/native_admob_home"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

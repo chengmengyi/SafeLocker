@@ -4,6 +4,9 @@ import com.tencent.mmkv.MMKV
 
 object LockPwdManager {
     var failNum=3
+    var lockUnlockNum=0
+
+    fun showFullAd()=lockUnlockNum%5==0
 
     fun countFailNum(){
         if(failNum>0){

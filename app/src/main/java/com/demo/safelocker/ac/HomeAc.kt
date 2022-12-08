@@ -5,6 +5,9 @@ import android.provider.Settings
 import android.view.Gravity
 import com.demo.safelocker.R
 import com.demo.safelocker.ac.lock.SetPwdAc
+import com.demo.safelocker.admob.AdType
+import com.demo.safelocker.admob.RefreshAdmob
+import com.demo.safelocker.admob.ShowNativeAdmob
 import com.demo.safelocker.app.*
 import com.demo.safelocker.base.BaseAc
 import com.demo.safelocker.dialog.NoticeDialog
@@ -16,6 +19,7 @@ import kotlinx.android.synthetic.main.layout_drawer.*
 import kotlinx.android.synthetic.main.layout_home_content.*
 
 class HomeAc:BaseAc() {
+    private val showHomeAdmob by lazy { ShowNativeAdmob(this,AdType.HOME) }
     private val tips="To use the application lock function, you need to obtain the permission of \"View Application Usage\""
 
     override fun layoutId(): Int = R.layout.activity_home
@@ -72,5 +76,17 @@ class HomeAc:BaseAc() {
         llc_privacy.setOnClickListener {
             startActivity(Intent(this,UrlAc::class.java))
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(RefreshAdmob.checkRefresh(AdType.HOME)){
+            showHomeAdmob.loopCheckAdmob()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showHomeAdmob.stopLoop()
     }
 }

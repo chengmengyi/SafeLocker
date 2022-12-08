@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gyf.immersionbar.ImmersionBar
 
 abstract class BaseAc:AppCompatActivity() {
+    var resume=false
     lateinit var immersionBar: ImmersionBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,21 @@ abstract class BaseAc:AppCompatActivity() {
     abstract fun layoutId():Int
 
     abstract fun view()
+
+    override fun onResume() {
+        super.onResume()
+        resume=true
+    }
+
+    override fun onPause() {
+        super.onPause()
+        resume=false
+    }
+
+    override fun onStop() {
+        super.onStop()
+        resume=false
+    }
 
     private fun fit(){
         val metrics: DisplayMetrics = resources.displayMetrics

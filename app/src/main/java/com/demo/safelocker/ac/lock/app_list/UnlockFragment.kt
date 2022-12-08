@@ -12,18 +12,22 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.safelocker.R
 import com.demo.safelocker.adapter.AppAdapter
+import com.demo.safelocker.admob.AdType
+import com.demo.safelocker.admob.ShowFullAdmob
+import com.demo.safelocker.admob.ShowLockAdmob
 import com.demo.safelocker.app.RegisterActivity
 import com.demo.safelocker.app.hasOverPermission
 import com.demo.safelocker.dialog.NoticeDialog
 import com.demo.safelocker.entity.AppInfoEntity
 import com.demo.safelocker.interfaces.IUpdateAppListCallback
 import com.demo.safelocker.lock.AppListManager
+import com.demo.safelocker.lock.LockPwdManager
 import kotlinx.android.synthetic.main.fragment_unlock.*
 
 class UnlockFragment:Fragment() {
     private val tips="To use the application locking function, you need to obtain the permission of \"Floating Window\""
 
-
+    private val showFullAdmob by lazy { ShowLockAdmob(requireActivity(),AdType.LOCK) }
     private var iUpdateAppListCallback:IUpdateAppListCallback?=null
     private val appAdapter by lazy { AppAdapter(requireContext(),AppListManager.unlockList){ click(it) } }
 
@@ -64,6 +68,10 @@ class UnlockFragment:Fragment() {
         AppListManager.lockOrUnlock(appInfoEntity)
         appAdapter.notifyDataSetChanged()
         iUpdateAppListCallback?.updateAppList(true)
+        LockPwdManager.lockUnlockNum++
+        if(LockPwdManager.showFullAd()){
+            showFullAdmob.showFullAd()
+        }
     }
 
     fun updateList(){

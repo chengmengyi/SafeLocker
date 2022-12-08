@@ -50,6 +50,9 @@
             android:screenOrientation="portrait"/>
 
         <service android:name=".lock.LockAppServers"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_id" />
     </application>
 
 </manifest>

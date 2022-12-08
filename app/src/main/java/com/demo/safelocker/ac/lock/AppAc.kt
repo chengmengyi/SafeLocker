@@ -10,6 +10,8 @@ import com.demo.safelocker.R
 import com.demo.safelocker.ac.HomeAc
 import com.demo.safelocker.ac.lock.app_list.LockedFragment
 import com.demo.safelocker.ac.lock.app_list.UnlockFragment
+import com.demo.safelocker.admob.AdType
+import com.demo.safelocker.admob.ShowNativeAdmob
 import com.demo.safelocker.app.RegisterActivity
 import com.demo.safelocker.app.isServiceRunning
 import com.demo.safelocker.base.BaseAc
