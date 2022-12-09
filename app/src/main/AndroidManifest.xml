@@ -50,6 +50,7 @@
             android:screenOrientation="portrait"/>
 
         <service android:name=".lock.LockAppServers"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
     </application>
 
 </manifest>

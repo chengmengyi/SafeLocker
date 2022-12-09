@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "650590869091",
+    "project_id": "safe-locker-43623",
+    "storage_bucket": "safe-locker-43623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650590869091:android:532dc8b64e08a1447c8a56",
+        "android_client_info": {
+          "package_name": "com.safelocker.secure.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650590869091-6tldft5itqhrc65h6fat1l621191369r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqU6FtQV4gXG9E1fV4itxyVy2r_ZdW3y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650590869091-6tldft5itqhrc65h6fat1l621191369r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
