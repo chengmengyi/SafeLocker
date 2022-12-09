@@ -15,6 +15,7 @@ import com.google.android.gms.ads.nativead.NativeAdOptions
 
 abstract class LoadAdmob {
     fun loadAdByType(adType: String,admobEntity: AdmobEntity,result:(entity:AdmobResultEntity?)->Unit){
+        safeLog("start load $adType , $admobEntity")
         when(admobEntity.slk_tt){
             "open"->{
                 AppOpenAd.load(
